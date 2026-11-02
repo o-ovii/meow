@@ -1,0 +1,277 @@
+/* General page style */
+
+body {
+    background-color: #c164b8e4;
+    
+    color: #52084e;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Main title */
+
+h1 {
+    color: #951858;
+    font-size: 60px;
+    text-shadow: 2px 2px #fefcfc;
+}
+
+/* Subtitles */
+
+h2 {
+    color: #30a044;
+    font-size: 60px;
+    border-bottom: 2px dotted #ff69b4;
+    padding-bottom: 8px;
+}
+
+/* Paragraphs */
+
+p {
+    font-size: 30px;
+    line-height: 1.8;
+}
+
+/* Lists */
+
+ul {
+    list-style-position: inside;
+     font-size: 40px;
+    padding: 0;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 60px;
+    color: #8b0b0b;
+    font-size: 40px;
+}
+h2:hover {
+    color: #12010a;
+    transition: 0.3s;
+}
+/* Zombie window */
+
+.zombie-box {
+    background-color: #caffb5;
+    border: 4px solid #836a7b;
+    outline: 3px dashed #4a1230;
+    margin: 35px auto;
+    max-width: 550px;
+    box-shadow: 6px 6px #680758;
+}
+
+/* Window header */
+
+.zombie-header {
+    background-color: #720f6c;
+    color: #ffb6d9;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 4px solid #e6d7df;
+}
+
+/* Window content */
+
+.zombie-content {
+    padding: 20px;
+}
+
+/* Brain decoration */
+
+.brain {
+    font-size: 100px;
+    filter: drop-shadow(2px 3px #ff1493);
+}
+
+/* Bloody text */
+
+.blood-text {
+    color: #d00036;
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+    
+}
+/* Retro image stickers */
+
+.sticker-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.sticker {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+    transform: rotate(-10deg) scale(1.2);
+}
+
+/* Zombie window upgrade */
+
+.zombie-box {
+    border: 4px ridge #03280a;
+    outline: 3px dashed #ff1493;
+    box-shadow:
+        5px 5px 0 #ff69b4,
+        10px 10px 0 #52084e;
+    position: relative;
+    overflow: hidden;
+}
+
+.zombie-header {
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #52084e;
+}
+
+.zombie-content h2 {
+    text-shadow: 2px 2px white;
+}
+
+.zombie-content {
+    background-image:
+        radial-gradient(#f6f9f7 1px, transparent 1px);
+    background-size: 15px 15px;
+}
+/* Blood decoration */
+.blood-text { color: #d00036; font-size: 20px; text-shadow: 2px 2px #ffb6d9; animation: creepy-pulse 1.5s infinite alternate; }
+@keyframes creepy-pulse { from { text-shadow: 1px 1px #ff69b4; }
+to {
+    text-shadow: 3px 3px white;
+    font-size: 40px
+}
+}
+/* Creepy details */
+.zombie-box::after { content: "🩸  🧠  🩸"; display: block; padding: 10px; color: #d00036; font-size: 22px; background-color: #ffb6d9; border-top: 2px dashed #30a044; }
+/* Animated creepy background */
+body { background-image: radial-gradient(#1b9f11 1.5px, transparent 1.5px), radial-gradient(#cf218f 1px, transparent 1px);
+background-size: 35px 35px, 55px 55px;
+
+background-position: 0 0, 20px 20px;
+
+animation: creepy-background 8s linear infinite;
+}
+@keyframes creepy-background {
+from {
+    background-position: 0 0, 20px 20px;
+}
+
+to {
+    background-position: 70px 70px, -35px -35px;
+}
+}
+.sticker {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.sticker {
+    width: 300px; 
+    height: 300px;
+    object-fit: contain;
+}
+
+
+
+/* Secret button */
+
+.secret-area {
+    margin: 30px 0;
+}
+
+#secret-button {
+    background-color: #ff1493;
+    color: white;
+    border: 3px dashed #52084e;
+    padding: 12px 22px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 4px #30a044;
+    transition: 0.3s;
+}
+
+#secret-button:hover {
+    background-color: #30a044;
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.hidden {
+    display: none;
+}
+
+#secret-message {
+    color: #d00036;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: creepy-pulse 1s infinite alternate;
+}
+.warning-box {
+    display: none;
+    background: #180000;
+    color: red;
+    border: 2px solid red;
+    padding: 25px;
+    text-align: center;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 0 25px red;
+    animation: warningFlash 0.7s infinite alternate;
+}
+
+@keyframes warningFlash {
+    from { box-shadow: 0 0 10px red; }
+    to { box-shadow: 0 0 30px red; }
+}
+
+.warning-box button {
+    background: red;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    
+}
+
+warning-text {
+    color: black;
+    font-size: 30px;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+
+    
+}
+
+.zombie-description {
+    color: rgb(78, 11, 79);
+    font-size:30px;
+    text-shadow: 2px 2px 5px rgb(244, 242, 242);
+}
+
+.blood-text { color: #d00036; font-size: 20px; text-shadow: 2px 2px #ffb6d9; animation: creepy-pulse 1.5s infinite alternate; }
+@keyframes creepy-pulse { from { text-shadow: 1px 1px #ff69b4; }
+to {
+    text-shadow: 3px 3px white;
+    font-size: 40px
